@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1607218242">
+  <project timestamp="1607218242">
+    <file name="/vagrant/noise/src/Noise.php">
+      <class name="Noise\Noise" namespace="global">
+        <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </class>
+      <line num="16" type="method" name="beep" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="18" type="stmt" count="1"/>
+      <metrics loc="20" ncloc="14" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+    </file>
+    <metrics files="1" loc="20" ncloc="14" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+  </project>
+</coverage>

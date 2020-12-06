@@ -1,0 +1,33 @@
+language: php
+php:
+  - 7.4
+
+git:
+  depth: false
+
+notifications:
+  email:
+    on_success: never
+
+before_install:
+  - phpenv config-rm xdebug.ini
+
+jobs:
+  include:
+    - stage: coverage
+      php: 7.4
+      name: Test Coverage
+      script:
+        - composer setup
+        - composer build
+      after_success:
+        - bash <(curl -s https://codecov.io/bash)
+
+addons:
+  sonarcloud:
+    organization: "medunes"
+    token:
+      secure: "j1KPXOG97pbflPnZA1E9GbS0p5VkqNpTDP1oo6chnqOsy5YEnkIcdeHgN+fBjO/wakZuxUhWCC/B05LS4nXMuykEkB/b2V6vrAp1q2yZhvmoQVM60w2tFeSFlXTZdzuJWmFKbKDRKEXstDmYvqD2NnCTqCn0fy+Ly4QAyc3FobTNcwHjVs3QkHsODzg2NBVHdcaEsSagn+lNRg4xfUPgxku2PuJz6fZUdazRMRVZsuCL6D3a0hMEj5yx87cP5KbVrdD96rsUaTgEQjeu5qjcpX2yRbP0sNcA3Ch8f7KLfKnw0PK0wkloWG8ArHerPnTdqd1lLGCXgRWUMl1KhaIz3w0Gv3fsrlXaPpJsvSibSGBwu02KorzfrCk39ZDRA/Vn6pdlYQsVmI2q2zlVW1gFMQlO70QcWd/cJBC50rOPu2Jfb+Kz8cZU4Eez9bJedZmEk4xlMaQ4Q1KR+NUA0eIqAmOjyNnwrwybKECm2esJODganQ0sm9AdJD+qPQadCeXghXppFQAVl3VkmqSoNMZoxqzlaMIjEypvWueXXz0W6s8QzEI8BYupfen049aVehCrYeTumiK9HUfExmxaUSqi0vR+sY/qTSoWHmIC7ROSqP/lO/EeO4wd0YboJccM3FSrZOj2I4/23gbDFMV/SRmaedcSDFeh12kPaiax0vTqoa4="
+script:
+  # other script steps might be done before running the actual analysis
+  - sonar-scanner
