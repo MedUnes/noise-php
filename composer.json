@@ -1,7 +1,7 @@
 {
-  "name": "medunes/noise",
+  "name": "medunes/noise-php",
   "description": "For noise, you know..",
-  "type": "library",
+  "type": "project",
   "license": "MIT",
   "authors": [
     {

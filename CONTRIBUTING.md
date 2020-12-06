@@ -6,7 +6,7 @@ We accept contributions via Pull Requests on [Github](https://github.com//MedUne
 
 ## Pull Requests
 
-- **[PSR-1 + PSR-2 + Symfony + ++](https://github.com/medunes/noise/blob/master/.php_cs.dist)** - The easiest way to apply the conventions is to have a look at the [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer#usage).
+- **[PSR-1 + PSR-2 + Symfony + ++](https://github.com/medunes/noise-php/blob/master/.php_cs.dist)** - The easiest way to apply the conventions is to have a look at the [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer#usage).
 
 - **Add tests!** - to ensure a high quality code base, your code patch can't be accepted if it doesn't have tests.
 
