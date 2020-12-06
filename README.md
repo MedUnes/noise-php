@@ -4,7 +4,7 @@ PHP Noise
     <img src="https://github.com/medunes/noise-php/blob/master/logo.png" width="200">
 </h1>
 
-<h5>A skeleton & PHP project starter with frequently needed boiler-plate setups (ci, badges, etc.)</h3>
+<h5>A starter-kit for your PHP project. It includes frequently needed boilerplate setups (ci, badges, etc.)</h3>
 
 [![release](https://img.shields.io/packagist/v/medunes/noise-php?style=flat-square)](https://packagist.org/packages/medunes/noise-php)
 [![Build Status](https://img.shields.io/travis/medunes/noise-php/master.svg?style=flat-square)](https://travis-ci.org/medunes/noise-php)
@@ -40,14 +40,25 @@ $ composer build
 ## ℹ️ FAQ
 
 #### So what is this?
-This is a PHP implementation of some noise you'll most probably need anyway.
+This is PHP Noise !
 
-#### And what is a noise?
-Nowadays, you don't just write some "working" code and ship it to the crowd through packagist..
+An empty skeleton, a list of ready to customize setups.
 
-There are a couple of homeworks you must do in order to have your masterpiece acceptable by the community: code quality, tests, readme, documentation, license, logo, changelog, CI and who knows what's next.
+These setups are commonly used when publishing PHP opensource projects or libraries.
 
-So those homeworks I call **noise**, they sound to me like noise not in a pejoratif way, but you know, developers usually ejoying creating new code, rather than spending time fixing, testing, validating or documenting it.
+I use this skeleton as a basis when I start a new project on Github.
+
+Instead of spending time setting up configs from scratch, I'd rather customize them.
+
+
+#### More details?
+Nowadays, you don't just write some "working" code and ship it to the community.
+
+There are a couple of disciplines you should follow in order to have your library acceptable by the community (or by yourself :) )
+
+For example, code quality, tests, README, Documentation, License, logo, CHANGELOG, CI and many others.
+
+I call these requirement: **noise**, not in a  pejorative way, but maybe because writing new code is more fun than spending time fixing, testing, validating or documenting it.
 
 #### Which kind of noise?
 
@@ -65,6 +76,7 @@ Currently, we support the following noise, but feel free to increase the volume:
 * [LOGO](https://github.com/medunes/noise-php/blob/master/logo.png)
 * [CHANGELOG](https://github.com/medunes/noise-php/blob/master/CHANGELOG.md)
 
-#### How can I use this?
+#### Where to go next?
 
-So myself, I use this skeleton as a basis whenever I start a new project on Github. Instead of spending "lovely" hours setting up configs, I have the template/skeleton which I can customize according to my needs.
+Writing noise projects for other languages: Javascript, Go, C, C++, ..
+
