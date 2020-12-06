@@ -1,7 +1,10 @@
 <h1 align="center">
+PHP Noise
     <br>
     <img src="https://github.com/medunes/noise-php/blob/master/logo.png" width="200">
 </h1>
+
+<h5>A skeleton & PHP project starter with frequently needed boiler-plate setups (ci, badges, etc.)</h3>
 
 [![release](https://img.shields.io/packagist/v/medunes/noise-php?style=flat-square)](https://packagist.org/packages/medunes/noise-php)
 [![Build Status](https://img.shields.io/travis/medunes/noise-php/master.svg?style=flat-square)](https://travis-ci.org/medunes/noise-php)
