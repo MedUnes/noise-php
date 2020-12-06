@@ -23,8 +23,17 @@ To install this application, first ensure you have [Composer](https://getcompose
 
 
 ```bash
-# Install dependencies
+# Create your skeleton app (feel free to change the folder name instead of the demo one)
 $ composer create-project medunes/noise-php my-demo-project
+
+# Enter your app folder
+$ cd my-demo-project
+
+# Install dependencies
+$ composer setup:clean
+
+# Run the build script (tests, etc.)
+$ composer build
 
 ```
 
