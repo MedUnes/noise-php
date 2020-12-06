@@ -1,12 +1,15 @@
 {
   "name": "medunes/noise-php",
   "description": "For noise, you know..",
+  "keywords": ["log", "logging", "psr-3"],
+  "homepage": "http://github.com/medunes/noise-php",
   "type": "project",
   "license": "MIT",
   "authors": [
     {
       "name": "medunes",
-      "email": "contact@medunes.net"
+      "email": "contact@medunes.net",
+      "homepage": "https://geo-battuta.net"
     }
   ],
   "require": {
@@ -14,9 +17,6 @@
   },
   "config": {
     "optimize-autoloader": true,
-    "preferred-install": {
-      "*": "dist"
-    },
     "sort-packages": true
   },
   "autoload": {
@@ -39,7 +39,7 @@
     "vimeo/psalm": "^4.2"
   },
   "scripts": {
-    "setup": "rm -f composer.lock && rm -rf vendor/ && composer clearcache && composer update --no-interaction --prefer-dist --no-suggest --no-progress",
+    "setup:clean": "rm -f composer.lock && rm -rf vendor/ && composer clearcache && composer update --no-interaction --prefer-dist --no-suggest --no-progress",
     "phpcs:scan": "php vendor/bin/phpcs --colors -ps --report=summary",
     "phpcs:fix": "php vendor/bin/phpcbf",
     "build:phpunit": "php vendor/bin/phpunit -c phpunit.xml --coverage-clover coverage.xml",
