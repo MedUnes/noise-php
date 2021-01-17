@@ -12,3 +12,11 @@ Changelog for v1.6
 ------------------
 
 Add .gitignore and composer.lock
+
+Changelog for v1.7
+------------------
+
+* Substitute Travis-ci with github actions
+* Add Psalm Coverage badge
+* Increase Psalm level to 5
+* Add PHP 7.2, PHP 7.3, PHP 8 to the build & to composer

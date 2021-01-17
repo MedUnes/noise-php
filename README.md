@@ -12,7 +12,9 @@ PHP Noise
 [![codecov](https://codecov.io/gh/medunes/noise-php/branch/master/graph/badge.svg)](https://codecov.io/gh/medunes/noise-php/branch)
 [![SonarQube Quality](https://sonarcloud.io/api/project_badges/measure?project=MedUnes_noise-php&metric=alert_status)](https://sonarcloud.io/dashboard?id=MedUnes_noise-php)
 [![PHPStan](https://img.shields.io/badge/PHPStan-Level%205-brightgreen.svg?style=flat&logo=php)](https://shields.io/#/)
-[![Psalm](https://img.shields.io/badge/Psalm-Level%201-brightgreen.svg?style=flat&logo=php)](https://shields.io/#/)
+[![Psalm](https://img.shields.io/badge/Psalm-Level%205-brightgreen.svg?style=flat&logo=php)](https://shields.io/#/)
+[![Psalm Coverage](https://shepherd.dev/github/MedUnes/noie-php/coverage.svg)](https://shepherd.dev/github/MedUnes/noie-php/coverage.svg)
+
 [![Total Downloads](https://img.shields.io/packagist/dt/medunes/noise-php?style=flat-square)](https://packagist.org/packages/medunes/noise-php)
 
 <br>
