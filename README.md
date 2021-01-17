@@ -70,7 +70,7 @@ Currently, we support the following noise, but feel free to increase the volume:
 * [PHPStan](https://github.com/phpstan/phpstan)
 * [Psalm](https://github.com/vimeo/psalm)
 * [SonarQube](https://docs.travis-ci.com/user/sonarcloud/)
-* [TravisCI](https://docs.travis-ci.com/user/languages/php/)
+* [Github Actions](https://github.com/marketplace/actions/setup-php-action)
 * [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer#usage)
 * [README](https://github.com/medunes/noise-php/blob/master/README.md)
 * [CONTRIBUTING](https://github.com/medunes/noise-php/blob/master/CONTRIBUTING.md)
