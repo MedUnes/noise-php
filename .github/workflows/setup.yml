@@ -1,0 +1,57 @@
+name: build
+on: [ push, pull_request ]
+jobs:
+  symfony:
+    name: Symfony (PHP ${{ matrix.php-versions }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php-versions: [ '7.3, 7.4, 8' ]
+    steps:
+      # 1- Checkout
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 10000
+      # 2- Setup PHP
+      - name: Setup PHP, with composer and extensions
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-versions }}
+          extensions: mbstring, xml, ctype, iconv, intl
+          tools: cs2pr, phpcs, phpstan, psalm, phpunit, composer
+      # 3- Setup dependencies
+      - name: Setup dependencies
+        run: composer setup:clean
+      # 4- Configure matchers (for PHPUnit error visualization on github Action)
+      - name: Configure matchers (for PHPUnit error visualization on github Action)
+        uses: mheap/phpunit-matcher-action@v1
+      # 5- Run Unit Tests
+      - name: Run Unit Tests
+        run: ./vendor/bin/phpunit --teamcity --coverage-clover coverage.xml -c phpunit.xml
+      # 6- Generate CodeCov
+      - name: Generate CodeCov
+        uses: codecov/codecov-action@v1
+      # 7- Run PHPStan scan
+      - name: Run PHPStan scan
+        run: phpstan analyze src --level=5 --error-format=checkstyle | cs2pr
+      # 8- Run Psalm scan
+      - name: Run Psalm scan
+        run: psalm --threads=8 --shepherd --stats --output-format=github
+      # 9- Run SonarCloud scan
+      - name: Run SonarCloud scan
+        uses: sonarsource/sonarcloud-github-action@master
+        with:
+          args: >
+            -Dsonar.projectKey=MedUnes_noise-php
+            -Dsonar.organization=medunes
+            -Dsonar.sources=src
+            -Dsonar.tests=tests
+            -Dsonar.language=php
+            -Dsonar.sourceEncoding=UTF-8
+            -Dsonar.exclusions=vendor/*
+            -Dsonar.verbose=true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
