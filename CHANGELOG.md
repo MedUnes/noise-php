@@ -20,3 +20,8 @@ Changelog for v1.7
 * Add Psalm Coverage badge
 * Increase Psalm level to 5
 * Add PHP 7.2, PHP 7.3, PHP 8 to the build & to composer
+
+Changelog for v1.8
+------------------
+
+* Add XDebug3 to code coverage

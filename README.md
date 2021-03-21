@@ -8,7 +8,7 @@ PHP Noise
 
 [![release](https://img.shields.io/packagist/v/medunes/noise-php?style=flat-square)](https://packagist.org/packages/medunes/noise-php)
 [![Build Status](https://github.com/medunes/noise-php/workflows/build/badge.svg?style=flat-square)](https://github.com/MedUnes/noise-php/actions?query=workflow%3A%22build%22)
-[![Author](https://img.shields.io/badge/author-@medunes-blue.svg?style=flat-square)](https://twitter.com/medunes)
+[![Author](https://img.shields.io/badge/author-@medunes-blue.svg?style=flat-square)](https://twitter.com/medunes2)
 [![codecov](https://codecov.io/gh/medunes/noise-php/branch/master/graph/badge.svg)](https://codecov.io/gh/medunes/noise-php/branch)
 [![SonarQube Quality](https://sonarcloud.io/api/project_badges/measure?project=MedUnes_noise-php&metric=alert_status)](https://sonarcloud.io/dashboard?id=MedUnes_noise-php)
 [![PHPStan](https://img.shields.io/badge/PHPStan-Level%205-brightgreen.svg?style=flat&logo=php)](https://shields.io/#/)
