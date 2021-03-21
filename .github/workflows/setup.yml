@@ -7,7 +7,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php-versions: [ '7.3, 7.4, 8' ]
+        php-versions: [ '7.4, 8' ]
     steps:
       # 1- Checkout
       - name: Checkout
@@ -24,21 +24,35 @@ jobs:
       # 3- Setup dependencies
       - name: Setup dependencies
         run: composer setup:clean
+      # 3- Setup xdebug
+      - name: Setup PHP with Xdebug
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version:  ${{ matrix.php-versions }}
+          coverage: xdebug
       # 4- Configure matchers (for PHPUnit error visualization on github Action)
       - name: Configure matchers (for PHPUnit error visualization on github Action)
         uses: mheap/phpunit-matcher-action@v1
       # 5- Run Unit Tests
       - name: Run Unit Tests
-        run: ./vendor/bin/phpunit --teamcity --coverage-clover coverage.xml -c phpunit.xml
-      # 6- Generate CodeCov
-      - name: Generate CodeCov
-        uses: codecov/codecov-action@v1
+        run: XDEBUG_MODE=coverage ./vendor/bin/phpunit --teamcity --coverage-clover ./coverage.xml -c phpunit.xml
+      # 6- Upload coverage
+      - uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+          files: ./coverage.xml
+          flags: unittests # optional
+          name: codecov-umbrella # optional
+          fail_ci_if_error: true # optional (default = false)
+          verbose: true # optional (default = false)
       # 7- Run PHPStan scan
       - name: Run PHPStan scan
         run: phpstan analyze src --level=5 --error-format=checkstyle | cs2pr
       # 8- Run Psalm scan
       - name: Run Psalm scan
         run: psalm --threads=8 --shepherd --stats --output-format=github
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # 9- Run SonarCloud scan
       - name: Run SonarCloud scan
         uses: sonarsource/sonarcloud-github-action@master

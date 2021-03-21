@@ -3,3 +3,4 @@ coverage/
 .phpunit.result.cache
 .phpunit.cache
 reports/
+coverage.xml
